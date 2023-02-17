@@ -9,110 +9,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Emil Sharkov</title>
         <link rel="icon" href="images/trakaworkouts.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Secular+One&display=swap');
+        </style> 
     </head>
 
     <body>
         <header>
-            <!-- navbar -->
-            <nav>
-                    <a href="">About</a>
-                    <a href="">Experience</a>
-                    <a href="">Personal Projects</a>
-                    <a href="">Contact Me</a>
-                    <a href="">Resume</a><br>
-                    <a href="miscellaneous.html">Miscellaneous</a>
-            </nav>
-
-            <!-- introduction when page opens -->
-            <section>
-                <h1>Emil Sharkov</h1>
-                <p>I'm a software developer specializing in back end development. </p>
-            </section>        
+            <div class="navbar-container">
+                <p class="navbar-name navbar-text">EMIL SHARKOV</p>
+                <!-- navbar -->
+                <nav class="navbar">
+                        <a class="nav-element navbar-text" href="">About</a>
+                        <a class="nav-element navbar-text" href="">Experience</a>
+                        <a class="nav-element navbar-text" href="">Personal Projects</a>
+                        <a class="nav-element navbar-text" href="">Contact Me</a>
+                        <a class="nav-element navbar-text" href="">Resume</a><br>
+                        <!-- <a href="miscellaneous.html">Miscellaneous</a> -->
+                </nav>
+            </div>       
         </header>
 
         <main>
+            <!-- introduction when page opens -->
+            <section class="home">
+                <h1 class="intro-title">HELLO THERE!</h1>
+                <h1 class="intro-title">MY NAME IS EMIL SHARKOV</h1>
+                <p class="intro-note">I'm a software developer specializing in back end development. </p>
+                <button class="intro-projects-button">PROJECTS</button>
+            </section> 
+
             <!-- About Me -->
-            <section>
-                <h2>About Me</h2>
-                <img src="images/sirpounce.png" alt="sir pounce">
-                <p>My name is Emil and I am a Computer Science major studying at the University of California San Diego. I worked closely with frontend and backend development at my last two internships at Ardigent Consulting and MakeItHappen. My expertise lies with JavaScript, Node.js, Python, and PostgreSQL and the libraries React.js, Next.js, and Express.js. However, my most recent interests have guided me towards DevOps technologies like AWS and Docker</p>
+            <section class="about-me">
+                <h2 class="about-me-title">About Me</h2>
+                <div class="links-container">
+                    <a href="emosharkov@gmail.com" class="link-icons"><img src="images/email.svg" width="50" height="50"/></a>
+                    <a href="https://www.github.com/emilsharkov" class="link-icons"><img src="images/github.svg" width="50" height="50"/></a>
+                    <a href="https://www.linkedin.com/in/emil-sharkov/" class="link-icons"><img src="images/linkedin.svg" width="50" height="50"/></a>
+                    <button class="resume-button">RESUME</button>
+                </div>
+                <p class="about-me-p">My name is Emil and I am a Computer Science major studying at the University of California San Diego. I worked closely with frontend and backend development at my last two internships at Ardigent Consulting and MakeItHappen. My expertise lies with JavaScript, Node.js, Python, and PostgreSQL and the libraries React.js, Next.js, and Express.js. However, my most recent interests have guided me towards cloud based technologies like AWS, Docker, Terraform, and Tableau.</p>
             </section>
 
             <!-- Work Experience -->
-            <section>
-                <h2>Work Experience</h2>
-                <h3>MakeItHappen</h3>
-                <b>Full Stack Intern</b>
-                <i>June - September 2023</i>
+            <section class="work-experience">
+                <h2 class="work-experience-title">Work Experience</h2>
+
+                <h3 class="company-name">MakeItHappen</h3>
+                <b class="work-experience-text">Full Stack Intern</b>
+                <i class="work-experience-text">June - September 2023</i>
                 <ul>
-                    <li>
+                    <li class="work-experience-text">
                         Reduced time spent on customer requests by creating internal tool to present statistics on over 20,000 users
                     </li>
-                    <li>
+                    <li class="work-experience-text">
                         Increased visual appeal and ease of access of customer website by redesigning existing components
                     </li>
-                    <li>
+                    <li class="work-experience-text">
                         Oversaw fixing client and server side defects to production identified by users of contracted internal tool
                     </li>
-                    <li>
+                    <li class="work-experience-text">
                         Managed client database maintenance and fetched appropriate data for client requests using SQL queries
                     </li>
                 </ul>
 
-                <h3>Ardigent Consulting</h3>
-                <b>Web Development Intern</b>
-                <i>October - December 2019</i>
+                <h3 class="company-name">Ardigent Consulting</h3>
+                <b class="work-experience-text">Web Development Intern</b>
+                <i class="work-experience-text">October - December 2019</i>
                 <ul>
-                    <li>
+                    <li class="work-experience-text">
                         Increased SEO and Google ranking by integrating React codebase with Next.js to allow for server side rendering                    </li>
-                    <li>
+                    <li class="work-experience-text">
                         Enhanced database security with sanitation procedures inside RESTful APIs to prevent SQL Injection attacks
                     </li>
-                    <li>
+                    <li class="work-experience-text">
                         Oversaw fixing client and server side defects to production identified by users of contracted internal tool
                     </li>
-                    <li>
+                    <li class="work-experience-text">
                         Improved accessibility of company website by refactoring landing page by utilizing CEO’s specifications
                     </li>
                 </ul>
             </section>
 
             <!-- Personal Projects -->
-            <section>
-                <h2>Personal Projects</h2>
-                <ul>
-                    <li>Traka Workouts</li>
-                    <li>CLISoundCloudDownloader</li>
-                    <li>LANConnect4</li>
-                    <li>AutomatedCookieClicker</li>
-                </ul>
+            <section class="project">
+                <h2 class="project-title">Personal Projects</h2>
+                <div class="project-container">
+                    <a class="project-item" href="https://github.com/emilsharkov/Traka">
+                        <img class="project-image" width="500" src="images/trakaworkouts.jpg"/>
+                    </a>
+                    <a class="project-item" href="https://github.com/emilsharkov/AutomatedCookieClicker">
+                        <img class="project-image" width="500" src="images/cookieclicker.jpg"/>
+                    </a>
+                </div>
                 
             </section>
 
             <!-- Contact Me -->
-            <section>
-                <h2>Contact Me</h2>
-                <p>For any professional inquiries please reach out to me by entering your information</p>
-                <form >
-                    <div>
-                      <label>Enter Your Name:</label>
-                      <input name="name" required>
-                    </div>
-                    <div>
-                      <label>Enter Your Email</label>
-                      <input name="email" required>
-                    </div>
-                    <div>
-                      <input type="submit" value="Submit">
-                    </div>
+            <section class="contact">
+                <h2 class="contact-title">Contact Me</h2>
+                <p class="contact-p">For any professional inquiries please reach out to me by entering your information</p>
+                <form class="contact-form">
+                      <label class="contact-label">Enter Your Name:</label>
+                      <input class="contact-input" name="name" required>
+                      <label class="contact-label">Enter Your Email:</label>
+                      <input class="contact-input" name="email" required>
+                      <button class="submit-button">Submit</button>
                   </form>
-                  
-                <ul>
-                    <li><a href="">emosharkov@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/emil-sharkov">LinkedIn</a></li>
-                    <li><a href="https://www.github.com/emilsharkov">My Github</a></li>
-                </ul>
-                <button>Download Resume</button>
             </section>
 
         </main>

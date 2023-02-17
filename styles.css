@@ -1,0 +1,325 @@
+:root {
+    --main-color: #353935;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.navbar-name {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+.navbar {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-element {
+    text-decoration: none;
+    color: var(--main-color);
+    padding-left: 1rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+    transition: transform .5s;
+}
+
+@keyframes example {
+    0%   {color: var(--main-color);}
+    40%  {color:#f6cc0f;}
+    100%  {color: var(--main-color);}
+  }
+
+.nav-element:hover {
+    transform: scale(1.05,1.05);
+    animation-name: example;
+    animation-duration: 3s;
+}
+
+.navbar-text{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.home {
+    background-image: url("images/page\ background.jpg");
+    background-size: cover;
+    width: 99vw;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.intro-note {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--main-color);
+}
+
+.intro-projects-button {
+    background-color: #f6cc0f;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-me {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.5rem;
+}
+
+.resume-button {
+    background-color: #f6cc0f;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-me-title{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    padding-top: 3rem;
+    color: var(--main-color);
+}
+
+.about-me-p {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    padding: 1rem 10rem 1rem 10rem;
+    line-height: 3rem;
+    color: var(--main-color);
+}
+
+.work-experience {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20rem;
+    width: 100%;
+}
+
+.work-experience-title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    padding-top: 3rem;
+    color: var(--main-color);
+}
+
+.company-name {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
+
+.work-experience-text {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.project-item {
+    padding-left: 1rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    color: var(--main-color);
+}
+
+.contact-p {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
+
+.contact-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 30rem;
+    height: 16rem;
+    background-color: #fafafa;
+    border-radius: 1rem;
+}
+
+.contact-label {
+    color: var(--main-color);
+    margin-left: 4rem;
+    margin-top: 2rem;
+    font-family: sans-serif;
+}
+
+.contact-input {
+    width: 20rem;
+    height: 2rem;
+    color: var(--main-color);
+    margin-left: 4rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    margin-left: 4rem;
+    background-color: #f6cc0f;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* phone */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .about-me-p {
+        padding: 1rem 0rem 1rem 0rem;
+    }
+
+    .project-image{
+        width: 300px;
+    }   
+
+    .work-experience {
+        padding-left: 0;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-label {
+        margin-left: 0rem;
+    }
+
+    .contact-input {
+        margin-left: 0rem;
+        padding-left: 3rem;
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 900px) {
+    .project-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .work-experience {
+        padding-left: 0;
+    }
+
+    .about-me-p {
+        padding: 1rem 0rem 1rem 0rem;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1200px) {
+
+}
