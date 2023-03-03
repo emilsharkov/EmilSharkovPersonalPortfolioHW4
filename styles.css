@@ -1,9 +1,23 @@
+#googleMap {
+    height: 100%;
+    width: 100%;
+}
+
+.map-title {
+    margin-block-start: -1.5rem;
+    margin-block-end: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
 :root {
     --main-color: #353935;
 }
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -20,8 +34,7 @@ body {
 .navbar-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    padding: 1.5rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
 }
 
 .navbar-name {
@@ -46,6 +59,10 @@ body {
     transition: transform .5s;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 @keyframes example {
     0%   {color: var(--main-color);}
     40%  {color:#f6cc0f;}
@@ -62,6 +79,7 @@ body {
     font-family: 'Source Sans Pro',sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .home {
@@ -99,6 +117,11 @@ body {
     font-weight: 700;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
+    transition: 1s;
+}
+
+.intro-projects-button:hover {
+    transform: scale(1.05);
 }
 
 .about-me {
@@ -107,6 +130,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 2rem;
 }
 
 .links-container{
@@ -270,6 +294,26 @@ body {
 @media only screen and (max-width: 600px) {
     .navbar {
         flex-wrap: wrap;
+    }
+
+    .navbar-text {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        
+    }
+
+    .hamburger-icon {
+        justify-self: center;
+        align-self: center;
+        margin-right: .5rem;
     }
 
     .about-me-p {
