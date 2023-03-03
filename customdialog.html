@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <main>
+        <title>Custom Dialog</title>
+    </main>
+    <body>
+        <div>
+            <button id='alert'>Alert</button>
+            <button id='confirm'>Confirm</button>
+            <button id='prompt'>Prompt</button>
+        </div>
+        <output id='output'></output>
+
+        <dialog id='alert-dialog'>
+            <form method='dialog'>
+                <h2>This page says</h2>
+                <p id='message-alert'></p>
+                <button id='ok-alert'>OK</button>
+            </form>
+        </dialog>
+        <dialog id='confirm-dialog'>
+            <form method='dialog'>
+                <h2>This page says</h2>
+                <p id='message-confirm'></p>
+                <button id='ok-confirm'>OK</button>
+                <button id='cancel-confirm' value='cancel'>Cancel</button>
+            </form>
+        </dialog>
+        <dialog id='prompt-dialog'>
+            <form method='dialog'>
+                <h2>This page says</h2>
+                <p id='message-prompt'></p>
+                <textarea id='textarea'></textarea>
+                <div>
+                    <button id='ok-prompt'>OK</button>
+                    <button id='cancel-prompt' value="cancel">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js" integrity="sha512-TRW4uJEyH03RBYDDP/0Nerf3y1zPCPzmLBq5IwjYtUyPD505Aro7Xh6ELpKmnH3yeKj6MP3meheJMJXB4aN0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type='module'>
+            import { bindAlert, bindConfirm, bindPrompt } from './customdialog.js'
+
+            bindAlert('This is an Alert')
+            bindConfirm('This is a Confirm')
+            bindPrompt('This is a Prompt')
+        </script>
+    </body>
+</html>

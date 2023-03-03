@@ -1,0 +1,100 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.island-container {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 1rem;
+}
+
+#add {
+    width: 9rem;
+    height: 2.5rem;
+    background-color: gray;
+    color: pink;
+    border-radius: 0.25rem;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.blog-posts-title {
+    color: pink;
+}
+
+dialog {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: aliceblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: .5rem 0 .5rem 0;
+    border-radius: 0.25rem;
+}
+
+textarea {
+    margin: .5rem 0 .5rem 0;
+    border-radius: 0.25rem;
+}
+
+label, h3[id^='title-'], h5[id^='date-'], p[id^='summary-'] {
+    color: pink;
+}
+
+.dialog-button {
+    align-self: center;
+    width: 5.5rem;
+    height: 2rem;
+    background-color: gray;
+    color: pink;
+    border-radius: 0.25rem;
+    border: none;
+    margin-top: .5rem;
+}
+
+div[id^='blog-entry-'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+button[id^='edit-'], button[id^='delete-'] {
+    align-self: center;
+    width: 9rem;
+    height: 2.5rem;
+    background-color: gray;
+    color: pink;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.edit-text {
+    margin-right: 1rem;
+    margin-left: .5rem;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

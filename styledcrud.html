@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='styledcrud.css' />
+        <title>Styled CRUD</title>
+    </head>
+    <body class='page'>
+        <main class='island-container'>
+            <h1 class='blog-posts-title'>Blog Posts</h1>
+            <button id='add'>Add</button>
+            <div id='blog-container'></div>
+        </main>
+
+        <dialog id='blog-dialog'>
+            <form method='dialog'>
+                <label>Post Title</label>
+                <input type='text' id='blog-title-input'/>
+                <label>Post Date</label>
+                <input type='date' id='blog-date-input'/>
+                <label>Post Summary</label>
+                <textarea id='textarea'></textarea>
+                <div>
+                    <button class='dialog-button' id='save'>Save</button>
+                    <button class='dialog-button' value='cancel'>Cancel</button>
+                </div>
+            </form>
+        </dialog>
+
+        <script type='module'>
+            import { bindAddBlogDialog, fetchBlogs } from './styledblog.js'
+            let blogs = localStorage.getItem('blogs')
+            blogs === null ? localStorage.setItem('blogs',JSON.stringify([])): fetchBlogs(blogs)
+            bindAddBlogDialog()
+        </script>
+    </body>
+</html>

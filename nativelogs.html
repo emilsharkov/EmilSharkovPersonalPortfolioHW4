@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link rel='stylesheet' href='hw4.css'/>
+        <title>Native Dialogs</title>
+    </head>
+    <body>
+        <div>
+            <button id='alert'>Alert</button>
+            <button id='confirm'>Confirm</button>
+            <button id='prompt'>Prompt</button>
+            <button id='safer-prompt'>Safer Prompt</button>
+        </div>
+        <output id='output'></output>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js" integrity="sha512-TRW4uJEyH03RBYDDP/0Nerf3y1zPCPzmLBq5IwjYtUyPD505Aro7Xh6ELpKmnH3yeKj6MP3meheJMJXB4aN0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            const alert = () => {
+                document.getElementById('alert').addEventListener("click",() => {
+                    window.alert('This is an Alert!')
+                    document.getElementById('output').innerHTML = ''
+                })
+            }
+
+            const confirm = () => {
+                document.getElementById('confirm').addEventListener("click",() => {
+                    document.getElementById('output').innerHTML = window.confirm('Confirm This!')
+                })
+            }
+
+            const prompt = () => {
+                document.getElementById('prompt').addEventListener("click",() => {
+                    let prompt = window.prompt('Respond To Prompt')
+                    let text = prompt !== null ? 'The value returned by the confirm method is : ' + prompt: 'User Didn\'t Enter Anything'
+                    document.getElementById('output').innerHTML = text
+                })
+            }
+
+            const saferPrompt = () => {
+                document.getElementById('safer-prompt').addEventListener("click",() => {
+                    let prompt = window.prompt('Respond To Prompt')
+                    let clean = DOMPurify.sanitize(prompt)
+                    let text = prompt !== null ? 'The value returned by the confirm method is : ' + clean: 'User Didn\'t Enter Anything'
+                    document.getElementById('output').innerHTML = text
+                })
+            }
+
+            window.addEventListener('DOMContentLoaded',alert)
+            window.addEventListener('DOMContentLoaded',confirm)
+            window.addEventListener('DOMContentLoaded',prompt)
+            window.addEventListener('DOMContentLoaded',saferPrompt)
+        </script>
+    </body>
+</html>

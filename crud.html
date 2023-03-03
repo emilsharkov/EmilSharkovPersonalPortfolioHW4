@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD</title>
+    </head>
+    <body>
+        <button id='add'>Add</button>
+        <div id='blog-container'></div>
+
+        <dialog id='blog-dialog'>
+            <form method='dialog'>
+                <label>Post Title</label>
+                <input type='text' id='blog-title-input'/>
+                <label>Post Date</label>
+                <input type='date' id='blog-date-input'/>
+                <label>Post Summary</label>
+                <textarea id='textarea'></textarea>
+                <div>
+                    <button id='save'>Save</button>
+                    <button value='cancel'>Cancel</button>
+                </div>
+            </form>
+        </dialog>
+
+        <script type='module'>
+            import { bindAddBlogDialog, fetchBlogs } from './blog.js'
+            let blogs = localStorage.getItem('blogs')
+            blogs === null ? localStorage.setItem('blogs',JSON.stringify([])): fetchBlogs(blogs)
+            bindAddBlogDialog()
+        </script>
+    </body>
+</html>
